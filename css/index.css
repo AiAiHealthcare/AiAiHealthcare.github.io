@@ -1,0 +1,19 @@
+#header h1 {
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    width: 100%;
+    padding: 0 3rem;
+    margin: 0;
+    font-size: 8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0,0,0,.2);
+    text-transform: uppercase;
+}
+
+

@@ -1,0 +1,170 @@
+/* For Tablet. */
+@media (max-width: 1024px) {
+
+  .dash .digit {
+    font-size: 3em;
+    height: 48px;
+  }
+  .minutes_dash .digit:first-child,
+  .seconds_dash .digit:first-child {
+    margin-left: 16px;
+  }
+  .mg-clock {
+    border: 3px solid #333;
+    height: 95px;
+    width: 95px;
+  }
+  .mg-clock .mg-clock-hour {
+    left: 0px;
+  }
+  .mg-clock .mg-clock-hour::before {
+    height: 22px;
+    top: 23px;
+  }
+  .mg-clock .mg-clock-minute::before {
+    height: 28px;
+    top: 46px;
+  }
+  .mg-clock .mg-clock-second::before {
+    height: 40px;
+    top: 43px;
+  }
+  .mg-single-counter {
+    padding: 49px 0;
+  }
+  .mg-single-heading p {
+    width: 55%;
+  }
+  .mg-single-portfolio img {
+    display: block;
+    width: 100%;
+  }
+  .mg-subscribe-now::before {
+    right: 106%;
+    top: -225%;
+    -webkit-transform: rotate(-39deg);
+    transform: rotate(-39deg);
+  }
+  .mg-subscribe-now::after {
+    left: 106%;
+    top: -225%;
+    -webkit-transform: rotate(39deg);
+    transform: rotate(39deg);
+  }
+  .mg-contact-form {
+    width: 70%;
+  }
+  .mg-social-lists {
+    width: 100%;
+  }
+
+
+} /***** END TABLET *****/
+
+ 
+/* For Mobile. */
+@media (max-width: 767px) {
+
+  .dash .digit {
+    font-size: 2em;
+    height: 28px;
+  }
+  .mg-single-counter h3 {
+    font-size: 1em;
+  }
+  .mg-logo a img {
+    width: 140px;
+  }
+  .mg-hero-heading h1 {
+    margin: 45px 0;
+    font-size: 3em;
+  }
+  .mg-hero-heading h2 {
+    font-size: 1.5em;
+  }
+  .mg-single-counter {
+    padding: 25px 0;
+  }
+  .mg-counter-body {
+    position: relative;
+  }
+  .clock-col {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: calc(100% + 30px);
+  }
+  .mg-single-counter::after {
+    display: none;
+  }
+  .mg-about-us {
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
+  .mg-single-heading h2 {
+    font-size: 3em;
+  }
+  .mg-single-heading .heading-bg {
+    font-size: 9em;
+  }
+  .mg-single-heading p {
+    width: 65%;
+    margin-top: 25px;
+  }
+  .mg-contact-form {
+    width: 80%;
+  }
+  .mg-subscribe-form form {
+    width: 60%;
+  }
+  .mg-subscribe-now {
+    padding-bottom: 88px;
+  }
+  .mg-social-lists li {
+    margin: 12px 0;
+  }
+  .mg-single-heading h2::after {
+    right: -80px;
+  }
+  .mg-main-counter {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+  .mg-large-canvas,
+  .mg-bg-video-wrapper,
+  #mg_youtube_video {
+    min-height: 450px;
+  }
+
+} /***** END MOBILE *****/
+
+
+
+/* For Mini Mobile. */
+@media (max-width: 480px) {
+
+  .mg-single-heading p {
+    margin-top: 25px;
+    width: 100%;
+  }
+  .mg-single-heading h2::before,
+  .mg-single-heading h2::after {
+    display: none;
+  }
+  .mg-subscribe-form form {
+    width: 100%;
+  }
+  .mg-subscribe-now::before,
+  .mg-subscribe-now::after {
+    display: none;
+  }
+  .mg-contact-form {
+    width: 95%;
+  }
+  .mg-single-heading p {
+    margin-top: 25px;
+    width: 85%;
+  }
+
+} /***** END MINI MOBILE *****/

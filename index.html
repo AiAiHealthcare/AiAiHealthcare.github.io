@@ -1,19 +1,161 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <!-- Making sure the web-site will scale fine on mobiles-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Trying to force IE to perform at its best-->
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        
-    </head>
-    <body class="combustion-yellow-skin">
-	    
-	    <section id="hero" class="hero full-height valign-wrapper scrollspy">
+
+<html lang="en">
+<head>
+
+    <script type="text/javascript">
+		if (window.location.protocol != "https:") {
+        	location.href = location.href.replace("http://", "https://");   
+    	};
+    	(function(h,o,t,j,a,r){
+	        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+	        h._hjSettings={hjid:285852,hjsv:5};
+	        a=o.getElementsByTagName('head')[0];
+	        r=o.createElement('script');r.async=1;
+	        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+	        a.appendChild(r);
+		})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700" type="text/css">
+
+    <title>Project AiAi</title>
+</head>
+
+<body>
+    <div id="header">
+        <section id="hero" class="hero full-height valign-wrapper scrollspy">
             <canvas id="canvas"></canvas>
         </section>
-    	<script src="yellow.js"></script>    
-    </body>
-</html>
 
+        <h1 class="center">Project AiAi</h1><script src="js/yellow.js" type="text/javascript">
+</script>
+    </div>
+
+    <div>
+        <div class="mini-section more-than">
+            <div class="container">
+                <h1 id="more-than-just-code"><b>About</b></h1>
+
+                <h3 class="lead-graf">AiAi is my code-charity project to create an open source Lung Cancer CAD (Computer-aided Detection) algorithm for the world. I plan to donate this radiology algorithm to Doctors without Borders and charitable hospitals in developing countries like India, Belarus, and Vietnam.</h3>
+            </div>
+        </div>
+
+        <div class="mini-section">
+            <div class="container">
+                <h1 id="more-than-just-code">Why <b>Lung Cancer</b> Algorithm</h1>
+
+                <h3 class="lead-graf">Each year more people die of lung cancer than of colon, breast, and prostate cancers combined. Lung cancer is asymptomatic in earlier stages and 5-year relative survival rate drops drastically as cancer progresses:</h3>
+
+                <div class="row section source-data-code">
+                    <div class="col-md-3"></div>
+
+                    <div class="col-md-3">
+                        <h3>Cancer Stage:</h3><font size="8">I.<br>
+                        II.<br>
+                        III.<br>
+                        IV.</font>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h3>Survival:</h3><font size="8">47%<br>
+                        26%<br>
+                        8%<br>
+                        2%</font>
+                    </div>
+
+                    <div class="col-md-3"></div>
+                </div>
+
+                <h3 class="lead-graf">So early detection is critical to survival. However, lung cancer is hard to detect and therefore a 1999 NIH long-term study of American Radiologists found that 19% of lung cancers present in chest X-Rays were missed. Furthermore, 71% of lung cancers detected in chest X-Rays were visible in retrospect on previous imaging studies, so they could have been detected earlier. These numbers may be more stark for developing nations.<br>
+                <br>
+                I aim to develop and freely share a Lung Cancer CAD algorithm with class leading sensitivity and specificity, which I hope will result in earlier detection and improved survival rates.</h3>
+            </div>
+        </div>
+
+        <div class="mini-section more-than">
+            <div class="container">
+                <h1 id="more-than-just-code"><b>Current CADs</b></h1>
+
+                <h3 class="lead-graf">An FDA-approved CADe / CADx algorithm costs $50,000 per year for low volume radiology facilities that consult &lt;20 patients per day. A typical large hospital license with hundreds of studies per day costs $500,000 per year or more.<br>
+                <br>
+                These costs are entirely out of reach for developing countries and charitable hospitals. That’s why the world needs an open-source alternative.</h3>
+
+                <div style="height:50px;">
+                    <h3 class="lead-graf"><img src="images/h1.png" class="center-block" style="width:60%;"></h3>
+
+                    <div style="height:50px;">
+                        <h3 class="lead-graf"></h3>
+                    </div>
+                </div>
+
+                <h1 id="more-than-just-code"><b>Baseline Sensitivity and Specificity Targets</b></h1>
+
+                <h3 class="lead-graf">According to a JDI paper, commercial CAD algorithm OnGuard v5.2 for lung cancer detection in CXR images provided 77.78% sensitivity with 32% false-positives and 55.7% test efficiency (Ref: Journal of Digital Imaging (2013) 26:651–656 DOI 10.1007/s10278-012-9565-4). I am aiming to beat all three numbers with our project by applying latest breakthroughs in Artificial Intelligence and Deep Learning.<br>
+                <br>
+                For reference, experienced Radiologist’s Lung Cancer sensitivity is 67.5% and specificity is 91% according to (Ref: PLOS ONE | DOI:10.1371/journal.pone.0136624)</h3>
+            </div>
+        </div>
+
+        <div class="mini-section" style="overflow: hidden; background-color:#ffd740; color:#fff; ">
+            <div class="container">
+                <h1 id="join-the-revolution" style="color:#fff; font-size: 500%;">Donate your Expertise</h1>
+            </div>
+
+            <div class="row section">
+                <div class="col-md-1"></div>
+
+                <div class="col-md-5">
+                    <a href="https://github.com/AiAiHealthcare/deepCAD"><img src="images/hammer.png" class="center-block" style="width: 50%;"></a>
+
+                    <h3 style="color:#fff; font-size:200%;">I am a Lawyer:<br>
+                    <br></h3>
+
+                    <p style="font-size: 130%;">You can donate your time to draft legal strategy for something that has never been done before: donating a Radiology CAD algorithm, globally. Please edit the wiki for legal strategy at:</p>
+                </div>
+
+                <div class="col-md-5">
+                    <a href="https://aiai.typeform.com/to/zeVTP9"><img src="images/radiology.png" class="center-block" style="width: 50%;"></a>
+
+                    <h3 style="color:#fff; font-size:200%; ">I am a Radiologist:<br>
+                    <br></h3>
+
+                    <p style="font-size: 130%;">You can donate your time to validate the CAD algorithm and its results. . Please fill out this form if you would like to donate a day to Project AiAi:<br>
+                    <br></p>
+                </div>
+
+                <div class="col-md-1"></div>
+            </div>
+
+            <div class="row section">
+                <div class="col-md-1"></div>
+
+                <div class="col-md-5">
+                    <a href="https://github.com/AiAiHealthcare/deepCAD"><img src="images/machine.png" class="center-block" style="width: 50%;"></a>
+
+                    <h3 style="color:#fff; font-size:200%;">I am a Machine Learning / Deep Learning Scientist:</h3>
+
+                    <p style="font-size: 130%;">You can contribute to AiAi code on Github, as long as you can work around one problem detailed in the README:<br>
+                    <br></p>
+                </div>
+
+                <div class="col-md-5">
+                    <a href="mailto:Keyur@AiAi.care"><img src="images/hospital.png" class="center-block" style="width: 50%;"></a>
+
+                    <h3 style="color:#fff; font-size:200%; ">I represent an NGO or Hospital:<br>
+                    <br></h3>
+
+                    <p style="font-size: 130%;">If your NGO or charitable hospital can benefit from a Lung Cancer CAD, please reach out to me. I will set you up with free access to a cloud-hosted CAD.<br>
+                    <br></p>
+                </div>
+
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
