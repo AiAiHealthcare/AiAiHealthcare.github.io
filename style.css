@@ -1,0 +1,1717 @@
+@charset "utf-8";
+/*------------------------------------------------------------------
+[Main Stylesheet]
+
+Project:    MountainGoat
+Version:    0.1
+Last change:    01.04.2016
+Primary use:    Coming Soon Template  
+
+
+[Typography]
+
+Body:               16px 'Source Sans Pro', sans-serif;
+Paragraph:          'Open Sans', sans-serif;
+Counter:            'Iceberg', cursive;
+Section Title:      32/1.1 'Source Sans Pro', cursive;
+Section Heading:    15px/1.7 "Source Sans Pro", sans-serif;
+Body Text:          15px/1.7 "Source Sans Pro", sans-serif;
+
+-------------------------------------------------------------------*/
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    background-color: #f6f6f6;
+    color: #333333;
+}
+
+/* -----------------------------------------------------------------
+  TYPOGRAPHY
+-------------------------------------------------------------------*/
+a, a:hover, a:focus, a:active {
+  text-decoration:none !important;
+  color: #333;
+}
+a:focus {
+  outline:0px solid
+}
+input:focus {
+  outline: none !important;
+}
+a{
+  font-size: 1em;
+  font-weight: 700;
+}
+img {
+  max-width:100%;
+  border: none;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight:normal;
+  margin:0 0 15px;
+}
+h1{
+  font-size: 4.000em;
+}
+h2{
+  text-transform: uppercase;
+  font-size: 4.000em;
+}
+h3{
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 1.250em;
+}
+small{
+    font-size: 0.8em;
+    font-weight: 300;
+    font-style: italic;
+}
+p {
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.7;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+canvas {
+  width: 100%;
+  height: 100%;
+}
+input{
+    -moz-box-sizing: border-box;
+     -ms-box-sizing: border-box;
+     -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+}
+#mountaingoat-preloader {
+  background-color: #FCF5E4;
+  background-image: url("images/preloader.gif");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999999;
+}
+.single-mg-overley{
+  background: rgba(246, 142, 153, 0.8) none repeat scroll 0 0;
+  height: 100%;
+  opacity: 0;
+  left: 0;
+  z-index: 2;
+  top: 0;
+  position: absolute;
+  transform: scale(0);
+  transition: all 0.4s ease-in-out 0s;
+  -webkit-transform: scale(0);
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  width: 100%;
+}
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.col-xs-5ths {
+    width: 20%;
+    float: left;
+}
+@media (min-width: 768px) {
+.col-sm-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+.mg-single-heading {
+  margin-bottom: 80px;
+  padding-top: 60px;
+  position: relative;
+  text-align: center;
+}
+.mg-single-heading h2 {
+  display: inline-block;
+  position: relative;
+}
+.mg-single-heading h2::before {
+  background-color: #87D37C;
+  content: "";
+  display: block;
+  height: 1px;
+  left: -95px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 75px;
+}
+.mg-single-heading h2::after {
+  background-color: #87D37C;
+  content: "";
+  display: block;
+  height: 1px;
+  right: -95px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 75px;
+}
+.mg-single-heading .heading-bg {
+  font-size: 14.625em;
+  font-weight: 900;
+  left: 50%;
+  line-height: 0.7;
+  opacity: 0.15;
+  position: absolute;
+  top: 60px;
+  transform: translateY(-30%) translateX(-50%);
+  -webkit-transform: translateY(-30%) translateX(-50%);
+}
+.mg-single-heading p {
+  margin: 45px auto auto;
+  width: 40%;
+}
+.mg-single-full {
+  width: 100%;
+}
+.mg-btn {
+  background-color: transparent;
+  border: 1px solid #333;
+  display: inline-block;
+  line-height: 16px;
+  margin-top: 15px;
+  padding: 14px 60px;
+  text-transform: uppercase;
+  width: auto;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+}
+.mg-btn::after {
+  width: 100%;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  background: #87D37C;
+  opacity: 0;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.mg-btn:hover:after,
+.mg-btn:active:after,
+.mg-btn:focus:after {
+  height: 260%;
+  opacity: 1;
+}
+.mg-btn:active:after {
+  height: 400%;
+  opacity: 1;
+}
+
+/* -----------------------------------------------------------------
+  MountainGoat - HERO HEADER CSS
+------------------------------------------------------------------*/
+.mg-hero-header {
+  background-image: url("http://placehold.it/2000x1800/87D37C/87D37C");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  min-height: 450px;
+}
+.mg-hero-content .container {
+  position: relative;
+}
+.mg-hero-content {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+.mg-hero-heading h1 {
+  margin: 60px 0;
+}
+.mg-hero-heading h2 {
+  font-size: 2em;
+  margin-top: 23px;
+  text-transform: none;
+  margin-bottom: 0;
+}
+.start_browsing {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 4;
+}
+@keyframes scroll-down-infinit {
+  0% {
+      bottom: 10px;
+  }
+  50% {
+      bottom: 18px;
+  }
+  100% {
+      bottom: 10px;
+  }
+}
+@-webkit-keyframes scroll-down-infinit {
+  0% {
+      bottom: 10px;
+  }
+  50% {
+      bottom: 18px;
+  }
+  100% {
+      bottom: 10px;
+  }
+}
+.start_browsing i {
+  bottom: 4px;
+  font-size: 2.2em;
+  left: 50%;
+  margin-left: -12px;
+  z-index: 2;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  animation: 1s ease 0s normal none infinite running scroll-down-infinit;
+  webkit-animation: 1s ease 0s normal none infinite running scroll-down-infinit;
+}
+.mg-hero-overley {
+  background-color: rgba(135, 211, 124, 0.4);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+/* -----------------------------------------------------------------
+  MountainGoat - CLOUD ANIMATION CSS
+------------------------------------------------------------------*/
+.clouds_one {
+  background: url("images/cloud_one.png");
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 300%;
+  -webkit-animation: cloud_one 50s linear infinite;
+  -moz-animation: cloud_one 50s linear infinite;
+  -o-animation: cloud_one 50s linear infinite;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0)
+}
+
+.clouds_two {
+  background: url("images/cloud_two.png");
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 300%;
+  -webkit-animation: cloud_two 75s linear infinite;
+  -moz-animation: cloud_two 75s linear infinite;
+  -o-animation: cloud_two 75s linear infinite;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0)
+}
+
+.clouds_three {
+  background: url("images/cloud_three.png");
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 300%;
+  -webkit-animation: cloud_three 100s linear infinite;
+  -moz-animation: cloud_three 100s linear infinite;
+  -o-animation: cloud_three 100s linear infinite;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0)
+}
+@-webkit-keyframes cloud_one {
+  0% {
+    left: 0
+  }
+  100% {
+    left: -200%
+  }
+}
+
+@-webkit-keyframes cloud_two {
+  0% {
+    left: 0
+  }
+  100% {
+    left: -200%
+  }
+}
+
+@-webkit-keyframes cloud_three {
+  0% {
+    left: 0
+  }
+  100% {
+    left: -200%
+  }
+}
+
+
+@keyframes cloud_one {
+  0% {
+    left: 0
+  }
+  100% {
+    left: -200%
+  }
+}
+
+@keyframes cloud_two {
+  0% {
+    left: 0
+  }
+  100% {
+    left: -200%
+  }
+}
+
+@keyframes cloud_three {
+  0% {
+    left: 0
+  }
+  100% {
+    left: -200%
+  }
+}
+
+/* -----------------------------------------------------------------
+  MountainGoat - MAIN COUNTER CSS
+------------------------------------------------------------------*/
+.mg-main-counter {
+  position: relative;
+  z-index: 6;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  opacity: 1;
+}
+.mg-counter-body {
+  background-color: #f6f6f6;
+  border: 15px solid #fff;
+  box-shadow: 0 22px 40px rgba(71, 71, 71, 0.33);
+  text-align: center;
+  z-index: 5;
+  opacity: 1;
+}
+.mg-main-counter.mg-hide-counter {
+  -webkit-transform: translateY(50%);
+  transform: translateY(50%);
+  z-index: 3;
+  opacity: 0;
+}
+.dash {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+.dash .digit {
+  float: left;
+  font-family: "Iceberg","cursive";
+  font-size: 4em;
+  height: 62px;
+  line-height: 1;
+  position: relative;
+  text-align: center;
+  width: auto;
+  margin-bottom: 6px;
+}
+.mg-single-counter h2,
+.mg-single-counter h3 {
+  font-family: 'Iceberg', 'cursive';
+}
+.mg-single-counter h3 {
+  margin-bottom: 0;
+  text-transform: none;
+}
+.mg-single-counter h2 {
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.mg-single-counter {
+  padding: 57px 0;
+  position: relative;
+}
+.mg-single-counter::after {
+  background-color: #333;
+  content: "";
+  display: block;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  width: 1px;
+}
+.minutes_dash .digit:first-child,
+.seconds_dash .digit:first-child {
+  margin-left: 8px;
+}
+/* -----------------------------------------------------------------
+  MountainGoat - ANIMATE CLOCK
+------------------------------------------------------------------*/
+.mg-counter-animate-clock {
+  padding: 40px 0;
+}
+.mg-clock {
+  background: white none repeat scroll 0 0;
+  border: 4px solid #333;
+  border-radius: 100%;
+  box-sizing: border-box;
+  height: 130px;
+  margin: auto;
+  position: relative;
+  width: 130px;
+}
+.mg-clock .mg-clock-top {
+  position: absolute;
+  width: 3px;
+  height: 8px;
+  background: #333;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.mg-clock .mg-clock-right {
+  position: absolute;
+  width: 8px;
+  height: 3px;
+  background: #333;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto 0;
+}
+.mg-clock .mg-clock-bottom {
+  position: absolute;
+  width: 3px;
+  height: 8px;
+  background: #333;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+}
+.mg-clock .mg-clock-left {
+  position: absolute;
+  width: 8px;
+  height: 3px;
+  background: #333;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto 0;
+}
+.mg-clock .mg-clock-center {
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #333;
+  border-radius: 100%;
+}
+.mg-clock .mg-clock-hour {
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  left: -1.5px;
+  right: 0;
+  margin: 0 auto;
+  -webkit-animation: time 60s infinite linear;
+  animation: time 60s infinite linear;
+}
+.mg-clock .mg-clock-hour:before {
+  position: absolute;
+  content: "";
+  background: #333;
+  height: 40px;
+  width: 3px;
+  top: 23px;
+}
+.mg-clock .mg-clock-minute {
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  left: 0.5px;
+  right: 0;
+  margin: 0 auto;
+  -webkit-animation: time 30s infinite linear;
+  animation: time 30s infinite linear;
+}
+.mg-clock .mg-clock-minute:before {
+  position: absolute;
+  content: "";
+  background: #333;
+  height: 40px;
+  width: 1px;
+  top: 58px;
+}
+.mg-clock .mg-clock-second {
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  left: 1px;
+  right: 0;
+  margin: 0 auto;
+  -webkit-animation: time 15s infinite linear;
+  animation: time 15s infinite linear;
+}
+.mg-clock .mg-clock-second:before {
+  position: absolute;
+  content: "";
+  background: #333;
+  height: 44px;
+  width: 2px;
+  top: 60px;
+}
+
+@keyframes time {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes time {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+/* -----------------------------------------------------------------
+  MountainGoat - ABOUT US CSS
+------------------------------------------------------------------*/
+.mg-about-us {
+  padding-bottom: 50px;
+  margin-top: -30px;
+}
+.mg-services-heading {
+  overflow: hidden;
+  width: 100%;
+}
+.mg-services-heading i {
+  color: #87D37C;
+  display: block;
+  font-size: 2em;
+  margin-right: 12px;
+  float: left;
+}
+.mg-services-heading h3 {
+  float: left;
+  letter-spacing: 2.5px;
+  margin-top: 4px;
+}
+.mg-services-heading {
+  margin-bottom: 10px;
+  overflow: hidden;
+  width: 100%;
+}
+.mg-services-content {
+  color: #777777;
+}
+.mg-single-services {
+  margin-bottom: 60px;
+}
+
+/* -----------------------------------------------------------------
+  MountainGoat - PORTFOLIO CSS
+------------------------------------------------------------------*/
+.mg-portfolios {
+  max-width: 1400px;
+  margin: auto;
+}
+.mg-portfolio-table {
+  display: table;
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 84%;
+  z-index: 2;
+}
+.mg-portfolio-table-cell {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+.mg-portfolio-table-cell a {
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+.mg-portfolio-table-cell a i {
+  margin-left: 3px;
+}
+.pattern_bg {
+  background-image: url("images/pattern.png");
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  opacity: 0.2;
+}
+.mg-single-portfolio a {
+  display: block;
+  overflow: hidden;
+}
+.mg-portfolio-table-cell a {
+  color: #777;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.mg-portfolio-table-cell a:hover {
+  color: #333;
+}
+.mg-single-portfolio.thumb-portfolio a {
+  cursor: -moz-zoom-in; 
+  cursor: -webkit-zoom-in; 
+  cursor: zoom-in;
+}
+.mg-single-portfolio img {
+  filter: gray; /* For IE6-9 */
+  filter: grayscale(1); /* For Microsoft Edge and Firefox 35+ */
+  -webkit-filter: grayscale(1);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.mg-single-portfolio a:hover img  {
+  filter: none; /* For IE6-9 */
+  -webkit-filter: grayscale(0);
+  transform: scale(1.1) rotate(2deg);
+  -webkit-transform: scale(1.1) rotate(2deg);
+}
+/* -----------------------------------------------------------------
+  MountainGoat - SUBSCRIBE NOW CSS
+------------------------------------------------------------------*/
+.mg-subscribe-now {
+  background-color: #fff;
+  overflow: hidden;
+  padding-bottom: 200px;
+  padding-top: 80px;
+  position: relative;
+}
+.mg-subscribe-form {
+  width: 100%;
+  position: relative;
+  z-index: 4;
+}
+.mg-subscribe-form form {
+  margin: auto;
+  max-width: 360px;
+  width: 30%;
+  text-align: center;
+  position: relative;
+}
+.mg-subscribe-form input {
+  background-color: transparent;
+  font-size: 15px;
+  line-height: 15px;
+  padding: 10px;
+  border-top: 0px solid;
+  border-left: 0px solid;
+  border-right: 0px solid;
+  border-bottom: 1px solid #333;
+  text-align: center;
+  width: 100%;
+}
+.mg-subscribe-now::before {
+  background-color: #87D37C;
+  content: "";
+  display: block;
+  height: 480%;
+  position: absolute;
+  right: 85%;
+  top: -200%;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  width: 60px;
+}
+.mg-subscribe-now::after {
+  background-color: #87D37C;
+  content: "";
+  display: block;
+  height: 480%;
+  position: absolute;
+  left: 85%;
+  top: -200%;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 60px;
+}
+.mg-subscribe-form form label {
+  display: block;
+  font-weight: 100;
+  left: 0;
+  margin-top: 15px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+/* -----------------------------------------------------------------
+  MountainGoat - CONTACT US CSS
+------------------------------------------------------------------*/
+.mg-contact-us {
+  padding-top: 60px;
+}
+.mg-contact-form {
+  margin: auto;
+  padding-bottom: 70px;
+  position: relative;
+  width: 60%;
+}
+.single-cform-item label {
+  cursor: pointer;
+  display: block;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.single-cform-item input,
+.single-cform-item textarea {
+  background-color: transparent;
+  font-size: 15px;
+  line-height: 15px;
+  padding: 10px 10px 10px 0;
+  border-top: 0px solid;
+  border-left: 0px solid;
+  border-right: 0px solid;
+  border-bottom: 1px solid #e2e2e2;
+  text-align: left;
+  width: 100%;
+}
+.single-cform-item {
+  margin-bottom: 40px;
+  position: relative;
+}
+.single-cform-item::before {
+  background-color: #333;
+  bottom: 0;
+  content: "";
+  height: 1px;
+  position: absolute;
+  width: 0%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-transition: 0.4s width ;
+  -moz-transition: 0.4s width ;
+  transition: 0.4s width ;
+}
+.single-cform-item textarea {
+  box-sizing: border-box;
+  min-height: 38px;
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+.single-cform-item:nth-child(3) {
+  margin-bottom: 20px;
+}
+.mg-contact-form::after {
+  background-color: #e2e2e2;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  margin-left: -40px;
+  position: absolute;
+  width: 80px;
+}
+#mgc_submit {
+  background-color: #333;
+  border: 1px solid #333;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 2px;
+  line-height: 14px;
+  padding: 12px;
+  text-transform: uppercase;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+#mgc_submit:after {
+  width: 100%;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  opacity: 0;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+#mgc_submit:hover,
+#mgc_submit:active,
+#mgc_submit:focus {
+  color: #333;
+}
+#mgc_submit:hover:after,
+#mgc_submit:active:after,
+#mgc_submit:focus:after {
+  height: 460px;
+  opacity: 1;
+}
+#mgc_submit:active:after {
+  height: 400%;
+  opacity: 1;
+}
+@keyframes fullWidth {
+  to {
+      width: 100%;
+  }
+}
+@-webkit-keyframes fullWidth {
+ to {
+      width: 100%;
+  }
+}
+.single-cform-item.active_item::before {
+  -webkit-animation-name: fullWidth;
+  animation-name: fullWidth;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 0.9s;
+  animation-duration: 0.9s;
+}
+#mg-form label.error {
+  color: #fc5152;
+}
+#mg-form label.valid i {
+  color: #2ccdae;
+}
+#mg-form label.error a {
+  display: block;
+}
+.contact-alert-message {
+  width: 100%;
+  overflow: hidden;
+}
+#mail_success,
+#mail_fail {
+  display: none;
+}
+.contact-alert-message {
+  padding: 10px 0 25px;
+  text-align: center;
+}
+#mail_fail i {
+  color: #ff0000;
+  -o-animation: flash 3s ease 0s backwards;
+  -ms-animation: flash 3s ease 0s backwards;
+  -moz-animation: flash 3s ease 0s backwards;
+  -webkit-animation: flash 3s ease 0s backwards;
+  animation: flash 3s ease 0s backwards;
+}
+#mail_success i {
+  color: #2eb267;
+  -o-animation: flash 3s ease 0s backwards;
+  -ms-animation: flash 3s ease 0s backwards;
+  -moz-animation: flash 3s ease 0s backwards;
+  -webkit-animation: flash 3s ease 0s backwards;
+  animation: flash 3s ease 0s backwards;
+}
+@-webkit-keyframes flash {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+.flash {
+  -webkit-animation-name: flash;
+          animation-name: flash;
+}
+
+/* -----------------------------------------------------------------
+  MountainGoat - FOOTER CSS
+------------------------------------------------------------------*/
+.mg-social-lists {
+  margin: 0 auto;
+  width: 60%;
+  text-align: center;
+}
+.mg-social-lists li {
+  display: inline-block;
+  margin: 12px;
+  text-align: center;
+}
+.mg-social-lists li a {
+  display: block;
+  font-family: "Open Sans",sans-serif;
+  font-weight: 300;
+  padding: 10px;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.mg-social-lists li a i {
+  display: block;
+  font-size: 38px;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.mg-social-lists li a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.freshr-button > span {
+  display: block;
+  margin-top: 5px;
+}
+.mg-main-footer {
+  padding-bottom: 60px;
+  padding-top: 50px;
+}
+.mg-footer-credit {
+  margin-top: 20px;
+  padding-bottom: 8px;
+}
+.mg-footer-credit p {
+  text-align: center;
+}
+
+/* -----------------------------------------------------------------
+  MountainGoat - MAIN COUNTER CSS
+------------------------------------------------------------------*/
+#mg_preloader_body {
+  background-color: #f8f8f8;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99999;
+}
+.mg_prelader_item {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+.mg_prelader_table {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+.mg_prelader_table_cell {
+  display: inline-block;
+}
+.mg_title_txt {
+  font-size: 2em;
+  line-height: 1;
+  margin-top: 22px;
+  position: relative;
+  text-transform: uppercase;
+}
+.mg_title_txt::before {
+  background-color: #87D37C;
+  bottom: -12px;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 125px;
+}
+.la-square-spin,
+.la-square-spin > div {
+    position: relative;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.la-square-spin {
+    display: block;
+    font-size: 0;
+    color: #333;
+}
+
+.la-square-spin.la-dark {
+    color: #333;
+}
+
+.la-square-spin > div {
+    display: inline-block;
+    float: none;
+    background-color: currentColor;
+    border: 0 solid currentColor;
+}
+
+.la-square-spin {
+    width: 32px;
+    height: 32px;
+}
+
+.la-square-spin > div {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    -webkit-animation: square-spin 3s 0s cubic-bezier(.09, .57, .49, .9) infinite;
+       -moz-animation: square-spin 3s 0s cubic-bezier(.09, .57, .49, .9) infinite;
+         -o-animation: square-spin 3s 0s cubic-bezier(.09, .57, .49, .9) infinite;
+            animation: square-spin 3s 0s cubic-bezier(.09, .57, .49, .9) infinite;
+}
+
+.la-square-spin.la-sm {
+    width: 16px;
+    height: 16px;
+}
+
+.la-square-spin.la-2x {
+    width: 64px;
+    height: 64px;
+}
+
+.la-square-spin.la-3x {
+    width: 96px;
+    height: 96px;
+}
+
+/*
+ * Animation
+ */
+@-webkit-keyframes square-spin {
+    0% {
+        -webkit-transform: perspective(100px) rotateX(0) rotateY(0);
+                transform: perspective(100px) rotateX(0) rotateY(0);
+    }
+    25% {
+        -webkit-transform: perspective(100px) rotateX(180deg) rotateY(0);
+                transform: perspective(100px) rotateX(180deg) rotateY(0);
+    }
+    50% {
+        -webkit-transform: perspective(100px) rotateX(180deg) rotateY(180deg);
+                transform: perspective(100px) rotateX(180deg) rotateY(180deg);
+    }
+    75% {
+        -webkit-transform: perspective(100px) rotateX(0) rotateY(180deg);
+                transform: perspective(100px) rotateX(0) rotateY(180deg);
+    }
+    100% {
+        -webkit-transform: perspective(100px) rotateX(0) rotateY(360deg);
+                transform: perspective(100px) rotateX(0) rotateY(360deg);
+    }
+}
+@-moz-keyframes square-spin {
+    0% {
+        -moz-transform: perspective(100px) rotateX(0) rotateY(0);
+             transform: perspective(100px) rotateX(0) rotateY(0);
+    }
+    25% {
+        -moz-transform: perspective(100px) rotateX(180deg) rotateY(0);
+             transform: perspective(100px) rotateX(180deg) rotateY(0);
+    }
+    50% {
+        -moz-transform: perspective(100px) rotateX(180deg) rotateY(180deg);
+             transform: perspective(100px) rotateX(180deg) rotateY(180deg);
+    }
+    75% {
+        -moz-transform: perspective(100px) rotateX(0) rotateY(180deg);
+             transform: perspective(100px) rotateX(0) rotateY(180deg);
+    }
+    100% {
+        -moz-transform: perspective(100px) rotateX(0) rotateY(360deg);
+             transform: perspective(100px) rotateX(0) rotateY(360deg);
+    }
+}
+@-o-keyframes square-spin {
+    0% {
+        transform: perspective(100px) rotateX(0) rotateY(0);
+    }
+    25% {
+        transform: perspective(100px) rotateX(180deg) rotateY(0);
+    }
+    50% {
+        transform: perspective(100px) rotateX(180deg) rotateY(180deg);
+    }
+    75% {
+        transform: perspective(100px) rotateX(0) rotateY(180deg);
+    }
+    100% {
+        transform: perspective(100px) rotateX(0) rotateY(360deg);
+    }
+}
+@keyframes square-spin {
+    0% {
+        -webkit-transform: perspective(100px) rotateX(0) rotateY(0);
+           -moz-transform: perspective(100px) rotateX(0) rotateY(0);
+                transform: perspective(100px) rotateX(0) rotateY(0);
+    }
+    25% {
+        -webkit-transform: perspective(100px) rotateX(180deg) rotateY(0);
+           -moz-transform: perspective(100px) rotateX(180deg) rotateY(0);
+                transform: perspective(100px) rotateX(180deg) rotateY(0);
+    }
+    50% {
+        -webkit-transform: perspective(100px) rotateX(180deg) rotateY(180deg);
+           -moz-transform: perspective(100px) rotateX(180deg) rotateY(180deg);
+                transform: perspective(100px) rotateX(180deg) rotateY(180deg);
+    }
+    75% {
+        -webkit-transform: perspective(100px) rotateX(0) rotateY(180deg);
+           -moz-transform: perspective(100px) rotateX(0) rotateY(180deg);
+                transform: perspective(100px) rotateX(0) rotateY(180deg);
+    }
+    100% {
+        -webkit-transform: perspective(100px) rotateX(0) rotateY(360deg);
+           -moz-transform: perspective(100px) rotateX(0) rotateY(360deg);
+                transform: perspective(100px) rotateX(0) rotateY(360deg);
+    }
+}
+
+
+/*-----------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+-------------------------------------- SPLIT VARIATION ------------------------------------------
+-------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------*/
+footer.mg-hero-footer {
+  bottom: 20px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+footer.mg-hero-footer .mg-footer-credit {
+  margin-top: 0;
+  padding-bottom: 0;
+}
+footer.mg-hero-footer .mg-footer-credit p {
+  margin: 0;
+  text-align: left;
+}
+.mg-hero-social-lists {
+  text-align: right;
+}
+.mg-hero-social-lists li {
+  display: inline-block;
+  margin: 0 5px;
+}
+.mg-single-cdtimer:last-child .mg-single-counter::after {
+  display: none;
+}
+.mg-hero-timer-area {
+  width: 70%;
+  margin: auto;
+}
+/* -----------------------------------------------------------------
+  MountainGoat - SUBSCRIPTION FORM
+------------------------------------------------------------------*/
+.md-perspective,
+.md-perspective body {
+  height: 100%;
+  overflow: hidden;
+}
+.md-perspective body  {
+  background: #222;
+  -webkit-perspective: 600px;
+  -moz-perspective: 600px;
+  perspective: 600px;
+}
+.md-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 40%;
+  max-width: 630px;
+  min-width: 320px;
+  height: auto;
+  z-index: 2000;
+  visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+.md-show {
+  visibility: visible;
+}
+.md-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  opacity: 0;
+  background: rgba(255,255,255,0.9);
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.md-show ~ .md-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+.md-content {
+  background-color: #333;
+  background-image: url("http://placehold.it/800x600/87D37C/87D37C");
+  background-repeat:  repeat;
+  background-attachment:  scroll;
+  background-position:  center center;
+  background-size: cover ;
+  box-shadow: 0 0 0 10px #87D37C,0 0 0 30px #ddd;
+  color: #fff;
+  margin: 0 auto;
+  padding: 35px 25px;
+  position: relative;
+}
+.md-content::before {
+  background-color: rgba(51, 51, 51, 0.9);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.md-content h3 {
+  margin: 0;
+  padding: 0.4em;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 700;
+  opacity: 0.8;
+  width: 80%;
+  margin: auto;
+  background: transparent;
+  border-radius: 3px 3px 0 0;
+}
+.md-content > div {
+  font-size: 1.15em;
+  font-weight: 300;
+  margin: 0;
+  padding: 15px 40px 30px;
+  position: relative;
+  z-index: 1;
+}
+.md-content > div p {
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+}
+.md-content > div ul {
+  margin: 0;
+  padding: 0 0 30px 20px;
+}
+.md-content > div ul li {
+  padding: 5px 0;
+}
+.md-content button {
+  display: block;
+  margin: 0 auto;
+  font-size: 0.8em;
+}
+.md-content .mg-subscribe-form form {
+  width: 100%;
+  margin-top: 30px;
+}
+.md-content .mg-subscribe-form input {
+  border: 1px solid #FFF;
+  background-color: #FFF;
+  color: #333;
+  margin-bottom: 20px;
+}
+.md-content .mg-btn {
+  border: 1px solid #fff;
+  width: 70%;
+}
+.md-effect-1 .md-content {
+  -webkit-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.md-show.md-effect-1 .md-content {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+.md-content button.md-close {
+  background-color: transparent;
+  border: 0 solid;
+  font-size: 30px;
+  line-height: 0.8;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+#mg_about_view {
+  height: auto;
+  margin-left: 25px;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: 50%;
+  transform: rotate(-90deg) translateX(-50%);
+  -webkit-transform: rotate(-90deg) translateX(-50%);
+  transform-origin: left top 0;
+  -webkit-transform-origin: left top 0;
+  width: auto;
+  z-index: 7;
+  padding: 2px 0;
+  display: inline-block;
+}
+#mg_contact_view {
+  display: inline-block;
+  height: auto;
+  left: calc(100% - 25px);
+  margin-right: 50px;
+  padding: 2px 0;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: 50%;
+  transform: rotate(90deg) translateX(-50%);
+  -webkit-transform: rotate(90deg) translateX(-50%);
+  transform-origin: left top 0;
+  -webkit-transform-origin: left top 0;
+  width: auto;
+  z-index: 7;
+}
+body.mg_onclick {
+  color: #FFF;
+}
+body.mg_onclick .mg-hero-overley {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+body.mg_onclick a {
+  color: #FFF;
+}
+body.mg_onclick .mg-hero-header {
+  background-color: transparent;
+  background-image: none;
+}
+body.mg_onclick .mg-btn {
+  border: 1px solid;
+}
+.mg_onclick_bginner {
+  height: 101%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.mg_onclick_bginner > div {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.mg_onclick_bginner {
+  background-image: url("http://placehold.it/1500x1000/87D37C/87D37C");
+  background-size: cover;
+}
+body.mg_onclick .mg-about-us {
+  margin-top: 0;
+  padding-top: 20px;
+}
+body.mg_onclick .mg-blank-about-us footer.mg-hero-footer {
+  position: relative;
+  bottom: 0;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+body.mg_onclick .mg-blank-about-us .mg-contact-us {
+  padding-top: 0;
+}
+body.mg_onclick .mg-modal a {
+  color: #333;
+}
+body.mg_onclick .mg-single-heading .heading-bg,
+body.mg_onclick .mg-single-heading h2::before,
+body.mg_onclick .mg-single-heading h2::after {
+  display: none;
+}
+body.mg_onclick .mg-single-heading p {
+  margin: 5px auto auto;
+  width: 60%;
+}
+body.mg_onclick .mg-single-heading {
+  margin-bottom: 95px;
+}
+body.mg_onclick .mg-single-heading h2 {
+  font-size: 3em;
+}
+body.mg_onclick .md-overlay {
+  background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
+}
+body.mg_onclick .mg_title_txt {
+  color: #333;
+}
+/* -----------------------------------------------------------------
+  ONCLICK - DEFAULT STYLE
+------------------------------------------------------------------*/
+body.mg_onclick.mg_onclick_default {
+  color: #333333;
+}
+body.mg_onclick.mg_onclick_default .mg-hero-header {
+  background-image: url("http://placehold.it/2000x1800/87D37C/87D37C");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body.mg_onclick.mg_onclick_default  .mg-hero-overley {
+  background-color: rgba(135, 211, 124, 0.4);
+}
+body.mg_onclick.mg_onclick_default .mg-btn {
+  color: #333;
+}
+body.mg_onclick.mg_onclick_default a {
+  color: #333;
+}
+/* -----------------------------------------------------------------
+  ONCLICK - HTML VIDEO + YOUTUBE VIDEO STYLE
+------------------------------------------------------------------*/
+body.mg_onclick.mg_onclick_video {
+  color: #333333;
+}
+body.mg_onclick.mg_onclick_video .mg-hero-overley {
+  background-color: rgba(135, 211, 124, 0.4);
+}
+body.mg_onclick.mg_onclick_video .mg-btn {
+  color: #333;
+}
+body.mg_onclick.mg_onclick_video a {
+  color: #333;
+}
+.mg-bg-video-wrapper {
+    background: rgba(0, 0, 0, 0) url("http://placehold.it/2000x1800/333333") no-repeat scroll center center / cover ;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+.mg-bg-video-wrapper video {
+    bottom: auto;
+    display: block;
+    height: auto;
+    left: 50%;
+    max-width: none;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    right: auto;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: auto;
+}
+.mg-bg-video-wrapper::after {
+    content: "mobile";
+    display: none;
+}
+@media only screen and (min-width: 768px) {
+  .mg-bg-video-wrapper::after {
+      content: "desktop";
+  }
+}
+#mg_youtube_video {
+  height: 101%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent;
+}
+.ytplayer-container{
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+/* -----------------------------------------------------------------
+  ONCLICK - BACKGROUND SLIDER STYLE
+------------------------------------------------------------------*/
+body.mg_onclick.mg_onclick_slider .mg-hero-content {
+  z-index: 9;
+}
+/* -----------------------------------------------------------------
+  ONSCROLL - DIFFERENT STYLE
+------------------------------------------------------------------*/
+#mg_scroll_particles,
+.mg-large-canvas {
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+#mg-bg-canvas canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+#mg-bg-canvas {
+  height: 101% !important;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  background-image: url("http://placehold.it/1500x1000/87D37C/87D37C");
+  background-size: cover;
+}
+body.mg_onclick.mg_onclick_tweenlite #mg-bg-canvas {
+  background-image: url("http://placehold.it/1500x1000/87D37C/87D37C");
+}
+body.mg_onclick.mg_onclick_spirit #mg-bg-canvas {
+  background-image: url("http://placehold.it/1500x1000/87D37C/87D37C");
+}
+body.mg_onclick.mg_onclick_spirit .mg-hero-overley {
+  background-color: rgba(135, 211, 124, 0.4);
+}
+body.on_scroll_particleground .mg-hero-content {
+  z-index: 3;
+}
+body.on_scroll_particleground .mg-hero-header {
+  background-image: url("images/bg.jpg");
+  opacity: 0.8;
+}
+body.on_scroll_tweenlite .mg-hero-header {
+  background-image: url("images/bg.jpg");
+  opacity: 0.8;
+}
+body.on_scroll_spirit .mg-hero-header {
+  background-image: url("images/bg.jpg");
+  opacity: 0.8;
+}
+body.on_scroll_collab .mg-hero-header,
+body.on_scroll_youtubevideo .mg-hero-header,
+body.on_scroll_slider .mg-hero-header {
+  background-image: none;
+  background-color: transparent;
+}
+body.on_scroll_collab .mg-large-canvas {
+  background-image: url("images/bg.jpg");
+  opacity: 0.8;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
+body.on_scroll_youtubevideo #mg_youtube_video {
+  background: transparent none repeat scroll 0 0;
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+}
+body.on_scroll_slider .mg-hero-content {
+  z-index: 9;
+}
+body.on_scroll_slider .mg-hero-overley {
+  z-index: 2;
+}
